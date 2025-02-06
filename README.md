@@ -28,7 +28,7 @@ Ce projet consiste en la conception et l'implémentation d'un noyau de système 
 Clonez le dépôt :
 
 ```bash
-    git clone 
+    git clone https://github.com/JAAFOURAMouez/PCSE-operating-system-design.git
 ```
 
 Compilez le noyau :
