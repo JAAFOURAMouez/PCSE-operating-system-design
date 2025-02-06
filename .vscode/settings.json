@@ -1,0 +1,20 @@
+{
+    "files.associations": {
+        "segment.h": "c",
+        "stdbool.h": "c",
+        "console.h": "c",
+        "time.h": "c",
+        "printf.h": "c",
+        "cpu.h": "c",
+        "processus.h": "c",
+        "atomic": "c",
+        "chrono": "c",
+        "cstdint": "c",
+        "system_error": "c",
+        "tinyalloc.h": "c",
+        "stdio.h": "c",
+        "inttypes.h": "c",
+        "string.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}
