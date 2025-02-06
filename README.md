@@ -28,62 +28,67 @@ Ce projet consiste en la conception et l'implémentation d'un noyau de système 
 Clonez le dépôt :
 
 ```bash
-git clone 
+    git clone 
 ```
+
 Compilez le noyau :
 
-bash
-Copy
-make
+```bash
+    make
+```
+
 Exécutez le noyau dans QEMU :
 
-bash
-Copy
+```bash
 make run
-📝 Fonctionnalités détaillées
-Gestion des interruptions
-Horloge : Utilisation du PIT (Programmable Interval Timer) pour générer des interruptions périodiques.
 
-Clavier : Gestion des entrées clavier via les interruptions IRQ1.
+```
 
-IDT : Initialisation de la table des vecteurs d'interruption pour gérer les interruptions matérielles.
+## 📝 **Fonctionnalités détaillées**
+### Gestion des interruptions
+- Horloge : Utilisation du PIT (Programmable Interval Timer) pour générer des interruptions périodiques.
 
-Ordonnancement des processus
-Round-Robin : Chaque processus reçoit un temps d'exécution fixe avant de passer la main au suivant.
+- Clavier : Gestion des entrées clavier via les interruptions IRQ1.
 
-Changement de contexte : Sauvegarde et restauration des registres du processeur lors du passage d'un processus à un autre.
+- IDT : Initialisation de la table des vecteurs d'interruption pour gérer les interruptions matérielles.
 
-Processus endormis : Gestion des processus en attente avec un mécanisme de type sleep.
+### Ordonnancement des processus
+- Round-Robin : Chaque processus reçoit un temps d'exécution fixe avant de passer la main au suivant.
 
-Gestion de l'écran
-Mode texte CGA : Affichage de caractères en 80 colonnes et 25 lignes.
+- Changement de contexte : Sauvegarde et restauration des registres du processeur lors du passage d'un processus à un autre.
 
-Curseur : Gestion du curseur clignotant pour indiquer la position d'écriture.
+- Processus endormis : Gestion des processus en attente avec un mécanisme de type sleep.
 
-Couleurs : Support des 16 couleurs de texte et 8 couleurs de fond.
+### Gestion de l'écran
+- Mode texte CGA : Affichage de caractères en 80 colonnes et 25 lignes.
 
-Gestion des processus
-Création : Création dynamique de processus avec allocation de mémoire.
+- Curseur : Gestion du curseur clignotant pour indiquer la position d'écriture.
 
-Terminaison : Terminaison explicite ou automatique des processus.
+- Couleurs : Support des 16 couleurs de texte et 8 couleurs de fond.
 
-Recyclage : Réutilisation des structures de processus terminés (zombies).
+### Gestion des processus
+- Création : Création dynamique de processus avec allocation de mémoire.
 
-📌 Améliorations possibles
-Priorités : Implémentation d'un système de priorités pour les processus.
+- Terminaison : Terminaison explicite ou automatique des processus.
 
-Synchronisation : Ajout de primitives de synchronisation (sémaphores, mutex).
+- Recyclage : Réutilisation des structures de processus terminés (zombies).
 
-Système de fichiers : Intégration d'un système de fichiers minimaliste.
+## 📌 **Améliorations possibles**
+- Priorités : Implémentation d'un système de priorités pour les processus.
 
-Multicœur : Support des processeurs multicœurs pour un véritable parallélisme.
+- Synchronisation : Ajout de primitives de synchronisation (sémaphores, mutex).
 
-📚 Documentation
+- Système de fichiers : Intégration d'un système de fichiers minimaliste.
+
+- Multicœur : Support des processeurs multicœurs pour un véritable parallélisme.
+
+## 📚 Documentation
+
 Pour plus de détails sur l'implémentation, consultez les fichiers PDF fournis :
 
-projet_pit.pdf : Gestion du temps et des interruptions.
+- projet_pit.pdf : Gestion du temps et des interruptions.
 
-projet_ecran.pdf : Gestion de l'écran en mode CGA.
+- projet_ecran.pdf : Gestion de l'écran en mode CGA.
 
-projet_processus.pdf : Gestion des processus et ordonnancement.
+- projet_processus.pdf : Gestion des processus et ordonnancement.
 
